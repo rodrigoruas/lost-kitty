@@ -1,0 +1,8 @@
+<h1>Pets#index</h1>
+<% @pets.each do |pet| %>
+  <h2><%= "#{pet.name} found #{pet.days_found} days ago "%></h2>
+  <h3><%= pet.location %></h3>
+  <p><%= pet.species %></p>
+  <%= link_to "<h1>Click Here</h1>".html_safe, pet_path(pet) %>
+  <%= link_to "Delete", pet_path(pet), method: :delete %>
+<% end %>
